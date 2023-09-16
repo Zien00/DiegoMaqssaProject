@@ -50,12 +50,10 @@ body * {
 #profile {
   text-align: center;
   padding: 24px;
-  
 }
 
 #profile img {
   width: 112px;
- 
 }
 
 #profile p {
@@ -64,7 +62,6 @@ body * {
 }
 ul {
   list-style: none;
-
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -75,11 +72,9 @@ ul li a {
   align-items: center;
   justify-content: center;
   padding: 18px 24px;
-
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
   text-decoration: none;
   font-weight: 500;
@@ -88,7 +83,6 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
-
   transition: background 0.2s;
 }
 
@@ -97,7 +91,6 @@ ul li a:hover {
   display: flex;
   gap: 32px;
   padding: 24px 0;
-
   font-size: 24px;
 }
 
@@ -106,7 +99,6 @@ display: flex;
 align-items:center;
 justify-content: center;
 padding:16px;
-
 transition: background 0.2s;
 border-radius: 50%;
 }
@@ -115,13 +107,11 @@ border-radius: 50%;
   background: var(--highlight-color);
   padding: 16px;
   border-radius: 50%;
-
 }
 
 footer {
 padding: 24px 0;
 text-align:center;
-
 }
 
 #switch button {
@@ -136,20 +126,17 @@ text-align:center;
   z-index: 1;
   transform: translateY(-50%);
   top: 50%;
-
-
+  animation: slide-out 0.4s;
 }
 
 #switch span {
   display: block;
-
   width: 59px;
   height: 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
   border-radius: 9999px;
-
 }
 
 #switch {
@@ -159,22 +146,44 @@ margin: 4px auto;
 }
 
 .light #switch button {
- right: 0;
- left: initial;
-
+ animation: slide-in 0.4s forwards ;
 }
 
 @media (min-width: 700px;) {
-
 :root {
    --bg-url: url(.assets/assets/bg-desktop.jpg)
 }
-
 .light{
   --bg-url: url(.assets/assets/bg-desktop-light.jpg)
 }
+}
 
 
+@keyframes slide-in{
+from {
+  left:0;
+}
+to{
+  left:50%;
+}
+}
+
+@keyframes slide-out {
+  from{
+    left:50%;
+  }
+  to{
+    left:0 ;
+  }
+}
+
+
+#switch button:hover{
+outline: 8px solid var(--highlight-color);
+}
+
+.light #switch button:hover{
+outline: 8px solid var(--highlight-color);
 }
 
 
