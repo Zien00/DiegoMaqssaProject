@@ -149,7 +149,7 @@ margin: 4px auto;
  animation: slide-in 0.4s forwards ;
 }
 
-@media (min-width: 700px;) {
+@media (min-width: 700px) {
 :root {
    --bg-url: url(.assets/assets/bg-desktop.jpg)
 }
